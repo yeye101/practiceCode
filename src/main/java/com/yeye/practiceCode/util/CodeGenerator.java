@@ -12,9 +12,9 @@ import java.util.*;
 public class CodeGenerator {
 
   public static void main(String[] args) {
-    String password = "admin4321";
-    String username = "admin";
-    String url = "jdbc:mysql://192.168.40.40:3306/saas_pd?serverTimezone=GMT%2B8&amp&useSSL=false";
+    String password = "Zdc20010604.";
+    String username = "root";
+    String url = "jdbc:mysql://110.42.136.163:3306/mall_wms?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai";
     String finalProjectPath = System.getProperty("user.dir");
 
     DataSourceConfig.Builder dataSourceConfig = new DataSourceConfig.Builder(url, username, password);
@@ -54,11 +54,6 @@ public class CodeGenerator {
           .enableRemoveIsPrefix()
           .enableTableFieldAnnotation()
           .enableLombok();
-
-        builder.serviceBuilder()
-          .formatServiceFileName("%sService")
-          .formatServiceImplFileName("%sServiceImpl")// service配置
-          .fileOverride();
 
         builder.controllerBuilder() // controller配置
           .enableRestStyle();
