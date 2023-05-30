@@ -18,11 +18,12 @@ public class CodeGenerator {
     String finalProjectPath = System.getProperty("user.dir");
 
     DataSourceConfig.Builder dataSourceConfig = new DataSourceConfig.Builder(url, username, password);
+    // 生成全部注释掉就好
     List<String> tableList = new ArrayList<>();
+//    tableList.add("wms_ware_order_task_detail");
     creteModel(dataSourceConfig, finalProjectPath, Boolean.TRUE, tableList);
 //    createSingleModel(dataSourceConfig,finalProjectPath);
   }
-
   private static void creteModel(DataSourceConfig.Builder dataSourceConfig,
                                  String finalProjectPath,
                                  Boolean isOverride,
