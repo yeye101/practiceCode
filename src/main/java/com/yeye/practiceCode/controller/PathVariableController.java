@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yeye.PracticeCode;
+package com.yeye.practiceCode.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;

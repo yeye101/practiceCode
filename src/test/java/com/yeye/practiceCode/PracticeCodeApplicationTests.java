@@ -1,4 +1,4 @@
-package com.yeye.PracticeCode;
+package com.yeye.practiceCode;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

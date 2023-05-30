@@ -12,8 +12,27 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>2.3.12.RELEASE</spring-boot.version>
+        <hutool.version>5.8.15</hutool.version>
+        <mybatis-plus.version>3.4.1</mybatis-plus.version>
+
     </properties>
+
+
+
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/cn.hutool/hutool-all -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis-plus.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jdbc</artifactId>
@@ -40,6 +59,9 @@
             </exclusions>
         </dependency>
     </dependencies>
+
+
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -69,7 +91,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
                 <configuration>
-                    <mainClass>com.yeye.PracticeCode.PracticeCodeApplication</mainClass>
+                    <mainClass>com.yeye.practiceCode.PracticeCodeApplication</mainClass>
                     <skip>true</skip>
                 </configuration>
                 <executions>

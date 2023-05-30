@@ -2,4 +2,10 @@
 # 应用服务 WEB 访问端口
 server:
   port: 8080
-
+logging:
+  level:
+    root: info
+debug: false
+spring:
+  profiles:
+    active: dev
