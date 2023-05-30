@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.generator.FastAutoGenerator;
 import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
 import com.baomidou.mybatisplus.generator.config.OutputFile;
 import com.baomidou.mybatisplus.generator.engine.VelocityTemplateEngine;
+import org.springframework.util.CollectionUtils;
 
 import java.util.*;
 
@@ -17,11 +18,15 @@ public class CodeGenerator {
     String finalProjectPath = System.getProperty("user.dir");
 
     DataSourceConfig.Builder dataSourceConfig = new DataSourceConfig.Builder(url, username, password);
-    creteModel(dataSourceConfig, finalProjectPath, Boolean.TRUE);
+    List<String> tableList = new ArrayList<>();
+    creteModel(dataSourceConfig, finalProjectPath, Boolean.TRUE, tableList);
 //    createSingleModel(dataSourceConfig,finalProjectPath);
   }
 
-  private static void creteModel(DataSourceConfig.Builder dataSourceConfig, String finalProjectPath, Boolean isOverride) {
+  private static void creteModel(DataSourceConfig.Builder dataSourceConfig,
+                                 String finalProjectPath,
+                                 Boolean isOverride,
+                                 List<String> tableList) {
     FastAutoGenerator.create(dataSourceConfig)
       .globalConfig(builder -> {
         builder.author("yeye1") // 设置作者
@@ -38,8 +43,12 @@ public class CodeGenerator {
 
       }).strategyConfig(builder -> {
 
+        if (!CollectionUtils.isEmpty(tableList)) {
+          builder.addInclude(tableList);
+        }
 
         builder.addTablePrefix("wms_");// 设置过滤表前缀
+
         builder.entityBuilder() // entity配置
           .enableRemoveIsPrefix()
           .enableTableFieldAnnotation()
