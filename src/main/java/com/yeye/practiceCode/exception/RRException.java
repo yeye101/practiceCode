@@ -6,7 +6,7 @@
  * 版权所有，侵权必究！
  */
 
-package com.yeye.practiceCode.util;
+package com.yeye.practiceCode.exception;
 
 /**
  * 自定义异常
