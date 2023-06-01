@@ -15,7 +15,9 @@ public class CodeGenerator {
     String password = "Zdc20010604.";
     String username = "root";
     String url = "jdbc:mysql://110.42.136.163:3306/mall_wms?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai";
-    String finalProjectPath = System.getProperty("user.dir");
+    String finalProjectPath =
+      Objects.requireNonNull(CodeGenerator.class.getClassLoader().getResource(""))
+        .getPath().replace("/target/classes/", "");
 
     DataSourceConfig.Builder dataSourceConfig = new DataSourceConfig.Builder(url, username, password);
     // 生成全部注释掉就好
