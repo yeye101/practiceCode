@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yeye.practiceCode.model;
+package com.yeye.model;
 
 /**
  * @author <a href="mailto:chenxilzx1@gmail.com">theonefx</a>

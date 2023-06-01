@@ -1,7 +1,7 @@
-package com.yeye.practiceCode.exception;
+package com.yeye.exception;
 
 import com.alibaba.fastjson.JSON;
-import com.yeye.practiceCode.util.R;
+import com.yeye.util.R;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DuplicateKeyException;

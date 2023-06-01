@@ -1,4 +1,4 @@
-package com.yeye.practiceCode.util;
+package com.yeye.util;
 
 
 import com.baomidou.mybatisplus.generator.FastAutoGenerator;
@@ -37,7 +37,7 @@ public class CodeGenerator {
           .outputDir(finalProjectPath + "/src/main/java"); // 指定输出目录
       })
       .packageConfig(builder -> {
-        builder.parent("com.yeye.practiceCode") // 设置父包名
+        builder.parent("com.yeye") // 设置父包名
           .entity("model") //设置entity包名
           .other("dao") // 设置dto包名
           .pathInfo(Collections.singletonMap(OutputFile.xml, finalProjectPath + "/src/main/resources/mapper")); // 设置mapperXml生成路径
@@ -91,7 +91,7 @@ public class CodeGenerator {
           .outputDir(finalProjectPath + "/src/main/java"))
       // 包配置
       .packageConfig(builder -> {
-        builder.parent("com.yeye.practiceCode") // 设置父包名
+        builder.parent("com.yeye") // 设置父包名
           .entity("model") //设置entity包名
           .other("dao") // 设置dto包名
           .pathInfo(Collections.singletonMap(OutputFile.xml, finalProjectPath + "/src/main/resources/mapper")); // 设置mapperXml生成路径

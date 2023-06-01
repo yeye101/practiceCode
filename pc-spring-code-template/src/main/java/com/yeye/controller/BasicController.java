@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.yeye.practiceCode.controller;
+package com.yeye.controller;
 
-import com.yeye.practiceCode.model.User;
+import com.yeye.model.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;

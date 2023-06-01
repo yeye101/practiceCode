@@ -6,7 +6,7 @@
  * 版权所有，侵权必究！
  */
 
-package com.yeye.practiceCode.constant;
+package com.yeye.constant;
 
 
 /**

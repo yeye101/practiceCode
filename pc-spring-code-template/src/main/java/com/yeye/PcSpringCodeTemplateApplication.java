@@ -1,14 +1,14 @@
-package com.yeye.practiceCode;
+package com.yeye;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
-public class PracticeCodeApplication {
+public class PcSpringCodeTemplateApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(PracticeCodeApplication.class, args);
+    SpringApplication.run(PcSpringCodeTemplateApplication.class, args);
   }
 
 }

@@ -6,7 +6,7 @@
  * 版权所有，侵权必究！
  */
 
-package com.yeye.practiceCode.util;
+package com.yeye.util;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.metadata.OrderItem;
@@ -14,7 +14,8 @@ import com.baomidou.mybatisplus.core.metadata.OrderItem;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 
-import com.yeye.practiceCode.constant.PageConstant;
+import com.yeye.constant.PageConstant;
+import com.yeye.util.SQLFilter;
 
 
 import java.util.Map;

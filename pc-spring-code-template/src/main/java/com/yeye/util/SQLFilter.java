@@ -6,10 +6,10 @@
  * 版权所有，侵权必究！
  */
 
-package com.yeye.practiceCode.util;
+package com.yeye.util;
 
 
-import com.yeye.practiceCode.exception.RRException;
+import com.yeye.exception.RRException;
 import org.apache.commons.lang3.StringUtils;
 
 /**
